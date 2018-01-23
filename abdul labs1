@@ -1,0 +1,16 @@
+Hi this is Abdul and this is my Unix programming lab
+This is my first lab session
+ Here today we learned the different commands to use in the Unix programming lab; they are:
+x-to delete the unwanted character ;
+u-to undo the the last command and U to undo the whole line ;
+CTRL-R- to redo ;
+A-to append text at the end ;
+:wq-to save and exit ;
+:ql-to trash all changes ;
+dw-move the curser to the begining of the word to delete that word ;
+2w-to move the curser two words forward ;
+3e-to move the curser to the end of the third word forward ;
+0-to move to the start of the line ;
+dd-to delete the line and 2dd to delete the line.number can be changed for deletingthe number of  consecutive words;
+
+
