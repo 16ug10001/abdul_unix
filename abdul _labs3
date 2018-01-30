@@ -1,0 +1,14 @@
+1)head-deletes from top
+head -n5 file.csv
+2)tail-deletes from bottom
+tail -n5 file.csv
+3)cut-cutting lines from each lines of the file
+cut -f2 file.csv
+4)paste-pastes the deleted data
+paste file.csv
+5)wc-counts the total number of lines,wordstand bytes
+wc file.csv
+6)sort-sorts the character according to its priorities
+sort file.csv
+7)uniq-reports out filtered lines
+uniq file.csv
