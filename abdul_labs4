@@ -1,0 +1,33 @@
+1.write a shell script to display date & time from date command
+command=date +"%D %T"
+2.write a shell script to check wether a number is positive or negative
+command=echo "enter a number "
+read n
+if test $n -gt 0
+then
+        echo "number is positive"
+else
+
+                echo "number is nagative" 
+fi
+3.write a shell script to print students grade
+command=echo " enter your marks"
+read n
+if [ "$n" -ge 90 ]
+then
+echo " you got A"
+elif [ "$n" -ge 80 ]
+then
+        echo " you got B"
+elif [ "$n" -ge 70 ]
+then
+        echo " you got C"
+elif [ "$n" -ge 60]
+then
+        echo "you got D"
+else
+        echo "you are failed"
+fi
+4.sort only name full from CSEB.csv
+command=$cut -d , -f 3 CSE.csv|grep -v CGPA|sort 
+ 
