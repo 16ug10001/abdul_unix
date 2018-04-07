@@ -1,0 +1,88 @@
+Q1) Shell script to do a word search.
+echo "Enter word or phrase to be searched"
+read n
+for i in /
+do
+	find / "$n"
+
+done
+
+Q3) Write a command to delete all blank lines from a file
+sed -i '/^$/d' k.txt
+
+Q4) Write a command to print only odd number of lines in the file
+awk "NR%2==1" k.txt
+
+Q5) Write a command to print the last field without knowing the number of fields
+awk -F "/"'{print $NF}' k1.csv
+
+Q6) Write aj equivalent awk command for:
+1) head -n 5 filename
+*) awk "NR<=5" k1.csv
+2) tail +20 filename
+*) tac k1.csv|awk ' NR==20 {exit} 1'| tac
+3) sed -n '5,10p' filename
+*) awk 'NR==5, NR==10' k1.csv
+
+Q2) Menu Driven program for file operations.
+echo "Enter your choice: \n 1) To copy the contents of a  file in another \n 2) To move one file to anoher \n 3) To remove  a file \n 4) To find the difference between  two files \n 5) To display contents of a file"
+	echo "Enter ur Choice \c"
+        read Choice
+        case"$Choice"in
+           1) echo "Enter File name to copy \c"
+              read f1
+              echo "Enter FIle name \c "
+               read f2         
+                 if [ -f $f1 ]
+                    then
+                        cp $f1 $f2
+                    else
+                        echo "$f1 does not exist"
+              fi
+              ;;
+          3) echo "Enter the File to be removed "
+             read r1
+             if [ -f $r1 ]
+             then      
+                   rm -i $r1
+             else 
+                  echo "$r1 file does not exist "
+             fi
+             ;;
+         2)
+            echo "Enter File name to move \c"
+            read f1
+            echo "Enter destination \c "
+            read f2
+            if [ -f $f1 ]
+             then 
+                 if [ -d $f2 ]
+                 then
+                      mv $f1 $f2
+                 fi
+             else
+                 echo "$f1 does not exist"
+            fi
+            ;;
+         4) echo "enter files that have to be compared"
+	    read r1,r2
+	    if [-f $r1]
+	    then 
+	        cmp $r1 r2
+		else
+                 echo "$f1 does not exist"
+            fi
+	    ;;
+	 5) echo " enter file whose contents are to be displayed"
+	    read f1
+	    if [-f $f1]
+	    then
+	       cat $f1
+	    else 
+	       echo "$f1 doesn't exist" 
+	     fi 
+	     ;;
+	 6)  echo "Exit"
+             exit;;
+	 *)  echo "Invalid Choice"
+	  esac
